@@ -12,3 +12,7 @@ wheels/
 
 # JUPYTER NOTEBOOKS
 .ipynb_checkpoints/
+
+
+# Environment variables
+.env
