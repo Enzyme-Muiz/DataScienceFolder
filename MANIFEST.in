@@ -1,0 +1,2 @@
+recursive-include dspackagefolder/template *
+recursive-include dspackagefolder/template .*

@@ -1,7 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "ukhsa-interview"
+name = "datascience_folder_structure"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+dspackagefolder = ["template/**"]
+
+
+[project.scripts]
+createdatasciencefolder = "dspackagefolder.main:create_ds_folder_cli"
