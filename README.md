@@ -13,11 +13,12 @@ I need to show examples of how to connect the data/sql/validation/logs/config/sr
 
 
 ## how to build:
-1) from the directory where thje pyproject sits, run:
-pip install -e .
+1) first git clone this repo
+2) from the directory where the pyproject.toml sits, run:
+pip install .
 
 ## how to use:
-1) createdatasciencefolder linc_work
+1) createdatasciencefolder datasciencefoldernamed
 2) createdatasciencefolder
 3) from dspackagefolder.main import create_ds_folder, create_ds_folder()
 
