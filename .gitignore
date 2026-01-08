@@ -16,3 +16,19 @@ wheels/
 
 # Environment variables
 .env
+
+########################
+# Editor / IDE temp files
+########################
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+*.orig
+
+.vscode/
+.idea/
+*.code-workspace
+*~$*.xlsx
