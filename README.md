@@ -14,7 +14,8 @@ I need to show examples of how to connect the data/sql/validation/logs/config/sr
 
 ## how to build:
 1) first git clone this repo
-2) from the directory where the pyproject.toml sits, run:
+2) ensure the old artefact build and egg-info folders are deleted first
+3) from the directory where the pyproject.toml sits, run:
 pip install .
 
 ## how to use:

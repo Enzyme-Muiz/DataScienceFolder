@@ -32,3 +32,4 @@ wheels/
 .idea/
 *.code-workspace
 *~$*.xlsx
+*.egg-info/
