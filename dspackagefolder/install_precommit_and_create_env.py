@@ -50,13 +50,17 @@ def setup_project_environment(project_dir: str | Path = "."):
     run(["git", "init"])  # Ensure git repo is initialized
     run(["pre-commit", "install"])
 
-    # 6️⃣ Create .env file
-    env_file = project_dir / ".env"
+    # 6️⃣ Create ENVIRONMENT folder and .env file inside it
+    env_folder = project_dir / "ENVIRONMENT"
+    env_folder.mkdir(parents=True, exist_ok=True)
+
+    env_file = env_folder / ".env"
+
     if not env_file.exists():
-        env_file.write_text("# Environment variables\n")
+        env_file.write_text("# Environment variables\n", encoding="utf-8")
         print(f"Created {env_file}")
     else:
-        print(".env already exists")
+        print(f"{env_file} already exists")
 
     print("✅ Project environment setup complete")
 
