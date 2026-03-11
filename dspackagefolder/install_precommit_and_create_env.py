@@ -62,5 +62,14 @@ def setup_project_environment(project_dir: str | Path = "."):
     else:
         print(f"{env_file} already exists")
 
+
+    gitignore_file = env_folder / ".gitignore"
+
+    if not gitignore_file.exists():
+        gitignore_file.write_text("*/\n", encoding="utf-8")
+        print(f"Created {gitignore_file}")
+    else:
+        print(f"{gitignore_file} already exists")
+
     print("✅ Project environment setup complete")
 
