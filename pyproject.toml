@@ -11,6 +11,7 @@ requires-python = ">=3.11"
 dependencies = [
     "path>=17.1.1",
     "python-dotenv>=1.2.1",
+    "sqlalchemy>=2.0.48",
     "toml>=0.10.2",
 ]
 
