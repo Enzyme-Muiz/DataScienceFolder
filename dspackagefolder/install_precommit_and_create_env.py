@@ -71,5 +71,46 @@ def setup_project_environment(project_dir: str | Path = "."):
     else:
         print(f"{gitignore_file} already exists")
 
+# 7️⃣ Create GitHub Actions workflow for pre-commit
+    github_workflows = project_dir / ".github" / "workflows"
+    github_workflows.mkdir(parents=True, exist_ok=True)
+
+    precommit_workflow = github_workflows / "pre-commit.yml"
+
+    if not precommit_workflow.exists():
+        precommit_workflow.write_text(
+            """name: Pre-commit
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pre-commit
+
+      - name: Run pre-commit
+        run: |
+          pre-commit run --all-files
+""",
+            encoding="utf-8",
+        )
+        print(f"Created GitHub Actions workflow at {precommit_workflow}")
+    else:
+        print(f"{precommit_workflow} already exists")
+
     print("✅ Project environment setup complete")
 
