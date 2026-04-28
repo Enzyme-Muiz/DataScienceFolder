@@ -4,6 +4,7 @@ import importlib.resources as resources
 import sys
 from dspackagefolder.install_precommit_and_create_env import setup_project_environment
 
+
 def create_ds_folder(folder_name: str = "dsframework"):
     # 1️⃣ Create destination folder
     # 2️⃣ Locate the template folder INSIDE the package
@@ -21,7 +22,6 @@ def create_ds_folder(folder_name: str = "dsframework"):
     # 4️⃣ Setup project environment
     setup_project_environment(target)
     print("🎉 Setup complete! Happy coding!")
-
 
 
 def create_ds_folder_cli():

@@ -1,26 +1,34 @@
-## TO USE THIS FOLDER:
-run the install_precommit_and_create_env.py first
-run uv add requirements.txt
+## Data Science Folder Structure Setup
 
+1. This was developed for creating a Python folder to start a data science project.
 
+2. It includes preconfigured connections to different systems:
+   - uv  
+   - git  
+   - GitHub workflow  
+   - .gitignore  
 
-## main_dashboard use and running
-main_dashboard.py is used for visualizing the dashboard of the data. 
-you run it by uv run streamlit run main_dashboard.py
+3. It also provides small code snippets for connecting to other systems.
 
-# WHAT TO DO NEXT
-I need to show examples of how to connect the data/sql/validation/logs/config/src
+4. Below are some of the systems included, along with additional setup steps to get them working:
+   - logging  
+   - SQL  
+   - src  
+   - config  
+   - pre-commit hook  
+   - .gitignore  
+   - git  
+   - GitHub workflow  
+   - uv  
+   - env  
+   - validation  
+   - testing  
+   - requirements.txt  
+     - Install dependencies with: `uv install requirements.txt`
 
-
-## how to build:
-1) first git clone this repo
-2) ensure the old artefact build and egg-info folders are deleted first
-3) from the directory where the pyproject.toml sits, run:
-pip install .
-
-## how to use:
-1) createdatasciencefolder datasciencefoldernamed
-2) createdatasciencefolder
-3) from dspackagefolder.main import create_ds_folder, create_ds_folder()
-
-
+5. Install the package:
+   ```bash
+   pip install datascience-folder-structure
+6. Create a folder structure:
+   ```bash
+   createdatasciencefolder NameOfProject

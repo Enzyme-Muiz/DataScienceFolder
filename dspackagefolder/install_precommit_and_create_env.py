@@ -35,7 +35,7 @@ def setup_project_environment(project_dir: str | Path = "."):
     # 3️⃣ Add requirements.txt using uv
     requirements = project_dir / "requirements.txt"
     if requirements.exists():
-        run(["uv", "add",  "-r", "requirements.txt"])
+        run(["uv", "add", "-r", "requirements.txt"])
     else:
         print("requirements.txt not found — skipping uv add")
 
@@ -62,7 +62,6 @@ def setup_project_environment(project_dir: str | Path = "."):
     else:
         print(f"{env_file} already exists")
 
-
     gitignore_file = env_folder / ".gitignore"
 
     if not gitignore_file.exists():
@@ -71,7 +70,7 @@ def setup_project_environment(project_dir: str | Path = "."):
     else:
         print(f"{gitignore_file} already exists")
 
-# 7️⃣ Create GitHub Actions workflow for pre-commit
+    # 7️⃣ Create GitHub Actions workflow for pre-commit
     github_workflows = project_dir / ".github" / "workflows"
     github_workflows.mkdir(parents=True, exist_ok=True)
 
@@ -113,4 +112,3 @@ jobs:
         print(f"{precommit_workflow} already exists")
 
     print("✅ Project environment setup complete")
-

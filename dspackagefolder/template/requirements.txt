@@ -1,6 +1,6 @@
-toml
-streamlit
-pydantic
-python-dotenv
-sqlalchemy
-pandas
+# toml
+# streamlit
+# pydantic
+# python-dotenv
+# sqlalchemy
+# pandas

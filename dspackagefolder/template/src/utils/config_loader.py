@@ -1,5 +1,6 @@
 from pathlib import Path
-import tomllib   # Python 3.11+
+import tomllib  # Python 3.11+
+
 # use: import tomli as tomllib   # if Python <= 3.10
 
 
