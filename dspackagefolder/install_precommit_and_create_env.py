@@ -145,4 +145,33 @@ jobs:
     except Exception as e:
         print(f"❌ Error creating GitHub workflow: {e}")
 
+    # 7️⃣ Create GitHub Actions workflow
+    try:
+        precommit_workflow = project_dir / ".pre-commit-config.yaml"
+
+        if not precommit_workflow.exists():
+            precommit_workflow.write_text(
+                """repos:
+ - repo: https://github.com/kynan/nbstripout
+   rev: 0.6.1
+   hooks:
+     - id: nbstripout
+ - repo: https://github.com/Yelp/detect-secrets
+   rev: v1.5.0
+   hooks:
+     - id: detect-secrets
+ - repo: https://github.com/psf/black
+   rev: 24.4.2
+   hooks:
+     - id: black
+""",
+                encoding="utf-8",
+            )
+            print(f"Created pre-commit configuration at {precommit_workflow}")
+        else:
+            print(f"{precommit_workflow} already exists")
+
+    except Exception as e:
+        print(f"❌ Error creating pre-commit configuration: {e}")
+
     print("✅ Project environment setup complete")
