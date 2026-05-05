@@ -41,7 +41,8 @@ from src.utils.env_loader import load_env_from_root
 
 env_path = load_env_from_root()
 print(f"Loaded env variables from: {env_path}")
-
+##import os
+##os.getenv("YOUR_ENV_VAR")
 
 ### Example usage of SQLCRUD
 import sys
