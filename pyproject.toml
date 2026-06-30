@@ -31,5 +31,6 @@ dspackagefolder = [
     "template/**/*",
     "template/**",
     "template/**/.*",
-    "template/.*/.*"
+    "template/.*/.*",
+    "template/.*/*"
 ]
