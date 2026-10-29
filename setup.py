@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="datascience_folder_structure",
-    version="0.1.1.1.1",
+    version="1.1.1.1",
     description="Add your description here",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
