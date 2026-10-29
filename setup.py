@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="datascience_folder_structure",
-    version="0.2.0",
+    version="0.1.1.1.1",
     description="Add your description here",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
@@ -21,6 +21,7 @@ setup(
     entry_points={
         "console_scripts": [
             "createdatasciencefolder=dspackagefolder.main:create_ds_folder_cli",
+            "dsf=dspackagefolder.main:create_ds_folder_cli",
         ],
     },
     include_package_data=True,

@@ -32,3 +32,7 @@
 6. Create a folder structure:
    ```bash
    createdatasciencefolder NameOfProject
+
+   or
+   ```bash
+   dsf NameOfProject 
