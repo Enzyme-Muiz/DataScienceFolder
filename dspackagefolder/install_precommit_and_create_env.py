@@ -74,6 +74,13 @@ def setup_project_environment(project_dir: str | Path = "."):
     # 5️⃣ Install pre-commit hooks
     try:
         run(["git", "init"])
+    except FileNotFoundError:
+        print("❌ Git is not installed or is not in your PATH.")
+        print("Please install Git from https://git-scm.com/downloads")
+        print("After installing Git, restart your terminal and try again.")
+    except Exception as e:
+        print(f"❌ Error initializing git repository: {e}")
+    try:
         run(["pre-commit", "install"])
     except Exception as e:
         print(f"❌ Error setting up pre-commit hooks: {e}")
