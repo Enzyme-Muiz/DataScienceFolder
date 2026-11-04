@@ -26,13 +26,28 @@
    - requirements.txt  
      - Install dependencies with: `uv install requirements.txt`
 
-5. Install the package:
+
+5. Install the package using either command:
+
    ```bash
    pip install datascience-folder-structure
-6. Create a folder structure:
-   ```bash
-   createdatasciencefolder NameOfProject
+   ```
 
    or
+
    ```bash
-   dsf NameOfProject 
+   pip install dsfolder
+   ```
+
+6. Create a folder structure using either command:
+
+   ```bash
+   createdatasciencefolder NameOfProject
+   ```
+
+   or the shorter alias:
+
+   ```bash
+   dsf NameOfProject
+   ```
+
